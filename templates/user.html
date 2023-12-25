@@ -1,0 +1,332 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/67da1afe5f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}"> 
+</head> 
+<body style="background-color: #eee;">
+
+    <div class="container">
+        <div class="d-flex justify-content-between mt-2">
+            <div class="">
+                <a href="#"style="text-decoration: none;" ><i class="fa-solid fa-user" style="height: 30px;"></i> &nbsp;&nbsp;<span style="font-size:23px; text-decoration: none;">Hi,{{user.username}}</span></a>                
+            </div>
+            <div class="">
+                <a href="#"style="text-decoration: none;" ><i class="fa-solid fa-message" style="height: 30px;"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <h3>Bal: {{user.wallet.balance}}</h3>
+    </div>
+
+    <div class="container">
+        <div class="fuction py-3">
+            <button type="button" class="btn btn-primary"><a href="topup"><span class="badge"><i class="fa-solid fa-wallet" style="height: 20px;"></i> &nbsp;&nbsp;<span style="font-size:15px;">Add money</span></span></a>
+                
+            </button>
+            <button type="button" class="btn btn-primary">
+                <a href="#"><span class="badge"><i class="fa-solid fa-paper-plane" style="height: 20px;"></i> &nbsp;&nbsp;<span style="font-size:15px;">Transfer</span></span></a>
+            </button>
+        </div>            
+    </div>
+
+    <div class="container">          
+        <div class="row">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-12">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-body" >
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12 col-sm-6 col-12 my-3">
+                                    <h5>Quick Action</h5>
+                                </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <a href="{% url 'airtime' %}" style="text-decoration: none;">
+                                            <div class="card my-3">
+                                                <div class="card-body text-center">
+                                                    <div class="mb-3">
+                                                        <div class="w-img">
+                                                            <img src="{% static 'img/smartphone.png' %}" width="70px" height="70px" alt="avatar">
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-bottom-section">
+                                                        <h5>Airtime</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <a href="{% url 'internet' %}" style="text-decoration: none;">
+                                            <div class="card my-3">
+                                                <div class="card-body text-center">
+                                                    <div class="mb-3">
+                                                        <div class="w-img">
+                                                            <img src="{% static 'img/internet(1).png' %}" width="70px" height="70px" alt="avatar">
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-bottom-section">
+                                                        <h5>Data</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                        <a href="{% url 'elec' %}" style="text-decoration: none;">
+                                            <div class="card my-3">
+                                                <div class="card-body text-center">
+                                                    <div class="mb-3">
+                                                        <div class="w-img">
+                                                            <img src="{% static 'img/icons8-bill-50.png' %}" width="70px" height="70px" alt="avatar">
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-bottom-section">
+                                                        <h5>Electricity</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
+                                        <a href="{% url 'tv' %}" style="text-decoration: none;">
+                                            <div class="card my-3">
+                                                <div class="card-body text-center">
+                                                    <div class="mb-3">
+                                                        <div class="w-img">
+                                                            <img src="{% static 'img/icons8-tv-50.png' %}" width="70px" height="70px" alt="avatar">
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-bottom-section">
+                                                        <h5>Cable Tv</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
+                                        <a href="{% url 'betting' %}" style="text-decoration: none;">
+                                            <div class="card my-3">
+                                                <div class="card-body text-center">
+                                                    <div class="mb-3">
+                                                        <div class="w-img">
+                                                            <img src="{% static 'img/icons8-ticket-50.png' %}" width="70px" height="70px" alt="avatar">
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-bottom-section">
+                                                        <h5>Betting</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>  
+                        </div>
+                    </div>
+                </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-body">
+                            <p style="font-size:23px;">History</p><hr>
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between"><img class="bd-placeholder-img rounded-circle p-1" width="50" src="{% static 'img/9mobile.jpg' %}" alt="">
+                                <div class="row px-2">
+                                    <div class="col-12">Data</div>
+                                    <div class="col-12" style="font-size: 12px; color: gray; font-style: italic;">9mobile<span>12:15pm</span></div>
+                                </div>
+                                </div>
+                                <div class="mt-3">₦128900</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- quick access  -->
+    <!-- <div class="container">
+        <div class="card box shadow p-3 mb-3">
+            <div class="row mb-4">
+                <p style="font-size: 23px;">Quick Access</p>                
+                <div class="col text-center" >
+                    <div class="card box shadow cardh flex-fill" style="height: 100px; width: 100px;">
+                        <a href="airtime" style="text-decoration: none;">
+                            <div class="card-body">
+                                <i class="fa fa-mobile"></i><br><span class="re">Airtime</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col text-center">
+                    <div class="card box shadow cardh flex-fill" style="height: 100px; width: 100px;">
+                        <a href="internet" style="text-decoration: none;">
+                            <div class="card-body">
+                                <i class="fa fa-globe"></i><br><span class="re">Data</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>                
+            </div>
+            <div class="row mb-4">                
+                <div class="col text-center">
+                    <div class="card box shadow cardh flex-fill">
+                        <a href="tv" style="text-decoration: none;">                            
+                        <div class="card-body">
+                            <i class="fa fa-television"></i><br><span class="re">Cable </span>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col text-center">
+                    <div class="card box shadow cardh flex-fill">
+                        <a href="betting" style="text-decoration: none;">                            
+                            <div class="card-body">
+                                <i class="fa-solid fa-ticket"></i><br><span class="re">Betting</span>
+                            </div>
+                        </a>                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">                
+                <div class="col-6 text-center">
+                    <div class="card box shadow cardh flex-fill">
+                        <a href="elec" style="text-decoration: none;">                            
+                            <div class="card-body">
+                                <i class="fa-solid fa-lightbulb"></i>  <br> <span class="re">Electricity</span>
+                            </div>
+                        </a>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- <div class="container">        
+        <div class="card box shadow p-3 mb-3">
+            <div class="row">
+                <p style="font-size:23px;">History</p>
+                <div class="col-lg-12 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between"><img class="bd-placeholder-img rounded-circle p-1" width="50" src="{% static 'img/glo1.jpg' %}" alt="">
+                                <div class="row px-2">
+                                    <div class="col-12">Data</div>
+                                    <div class="col-12" style="font-size: 12px; color: gray; font-style: italic;">Glo <span>10:35am</span></div>
+                                </div>
+                                </div>
+                                <div class="mt-3">₦128900</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-12 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between"><img class="bd-placeholder-img rounded-circle p-1" width="50" src="{% static 'img/mtn.png' %}" alt=""> 
+                                <div class="row px-2">
+                                    <div class="col-12">Airtime</div>
+                                    <div class="col-12" style="font-size: 12px; color: gray; font-style: italic;">MTN <span>12:15pm</span></div>
+                                </div>
+                                </div>
+                                <div class="mt-3">₦1000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-12 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between"><img class="bd-placeholder-img rounded-circle p-1" width="50" src="{% static 'img/airtel.jpg' %}" alt=""> 
+                                <div class="row px-2">
+                                    <div class="col-12">Data</div>
+                                    <div class="col-12" style="font-size: 12px; color: gray; font-style: italic;">Airtel <span>12:15pm</span></div>
+                                </div>
+                                </div>
+                                <div class="mt-3">₦128900</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-12 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between"><img class="bd-placeholder-img rounded-circle p-1" width="50" src="{% static 'img/9mobile.jpg' %}" alt="">
+                                <div class="row px-2">
+                                    <div class="col-12">Data</div>
+                                    <div class="col-12" style="font-size: 12px; color: gray; font-style: italic;">9mobile<span>12:15pm</span></div>
+                                </div>
+                                </div>
+                                <div class="mt-3">₦128900</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-12 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between"><img class="bd-placeholder-img rounded-circle p-1" width="50" src="{% static 'img/dstv.jpg' %}" alt="">
+                                <div class="row px-2">
+                                    <div class="col-12">Tv Subscription</div>
+                                    <div class="col-12" style="font-size: 12px; color: gray; font-style: italic;">Dstv <span>12:15pm</span></div>
+                                </div>
+                                </div>
+                                <div class="mt-3">₦128900</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-12 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between"><img class="bd-placeholder-img rounded-circle p-1" width="50" src="{% static 'img/waec.jpg' %}" alt="">
+                                <div class="row px-2">
+                                    <div class="col-12">Others</div>
+                                    <div class="col-12" style="font-size: 12px; color: gray; font-style: italic;">Waec card <span>12:15pm</span></div>
+                                </div>
+                                </div>
+                                <div class="mt-3">₦1000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                
+                <div class="col mt-3" >
+                    <center><a href="#" style="font-size: 20px; color: gray; text-decoration: none;"><p>See more....</p></a></center>
+                </div>
+                
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="mb-4" style="float: right;">
+            <a href="signout"><button type="button" name="" id="" action="signout" class="btn btn-danger">logout</button></a>         
+        </div>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+header{
+    background-color: #fff !important;
+}
+.hnav a{
+    font-family: "Poppins", poppins !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    padding-left: 15px !important;
+    padding-right: 15px ;
+    color: gray;
+}
+
+.footernav a , .footernav{
+    padding-right: 15px ;
+    color: #fff;
+}
+
+.signin{
+    margin-top: 90px;
+}
+
+.service img{
+    height: 70px;
+}
+
+.vtu .card-body img{
+    vertical-align: middle !important;
+}
+
+.vtu .card-body{
+    min-height: 300px;
+}
+
+#pricing{
+    margin-top: 20vh;
+}
+
+/* profile page  */
+
+.cardh:hover{
+    background-color: #eee;
+}
+
+
+/*----------------- jazmin style --------------- */
+.login-logo img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+    .card-body{
+        /* max-width: 52.53px; */
+        padding: 5px;
+        /* justify-content: center;
+        align-self: center; */
+    }
+    span.re{
+        font-size: 7px;
+    }    
+}

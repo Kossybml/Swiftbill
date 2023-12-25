@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://bmlgraphicsandweb.netlify.app" style="width: 100%; height: 400px;"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Your HTML content here -->
+
+<!-- Include Bootstrap JavaScript (jQuery and Popper.js are required) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+<!-- url = "https://api.paystack.co/transaction/initialize"
+        secret_key = "sk_test_9af356bd919ab4dce2839c9f40a0764ab9c5521e"
+        headers = {
+            "Authorization": f"Bearer {secret_key}",
+            "Content-Type": "application/json",
+        }
+        data = {
+            "email": email,
+            "amount": amount,
+        }
+        response = requests.post(url, headers=headers, json=data)
+        if response.status_code == 200:
+            data = response.json()
+            if data.get("status") is True:
+                authorization_url = data.get("data", {}).get("authorization_url")
+                
+    #             context = {  
+    #                 "user": request.user,
+    #                 "authorization_url": authorization_url,  # Add the authorization_url to the context
+    #             }
+
+    # # If the request method is not POST or the authorization_url is not available, still render the template -->
