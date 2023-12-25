@@ -1,4 +1,5 @@
 
+
 header{
     background-color: #fff !important;
 }
@@ -42,7 +43,26 @@ header{
 .cardh:hover{
     background-color: #eee;
 }
-
+.round-button1{
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50px; /* Adjust the value to control the curve */
+      background-color: #08703f; /* Background color of the button */
+      color: #fff; /* Text color of the button */
+      border: none; /* Remove border */
+      cursor: pointer;
+}
+.round-button2{
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px; /* Adjust the value to control the curve */
+    background-color: #ff8800; /* Background color of the button */
+    color: #fff; /* Text color of the button */
+    border: none; /* Remove border */
+    cursor: pointer;
+}
 
 /*----------------- jazmin style --------------- */
 .login-logo img {
@@ -60,5 +80,5 @@ header{
     }
     span.re{
         font-size: 7px;
-    }    
+    }      
 }
